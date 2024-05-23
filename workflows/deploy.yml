@@ -1,0 +1,27 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run deployment script
+      uses: appleboy/ssh-action@v0.1.2
+      with:
+        host: ${{ secrets.https://1yubran1.github.io/Oasis/ }}
+        username: ${{ secrets.superadmin }}
+        key: ${{ secrets.superadmin }}
+        script: |
+          cd C:\WinNMP\WWW\OasisGourmet
+          git pull origin master
+          composer install --no-interaction --prefer-dist --optimize-autoloader
+          php yii migrate --interactive=0
+          sudo systemctl restart nginx
