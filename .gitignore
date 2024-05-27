@@ -1,19 +1,19 @@
 # phpstorm project files
-.idea
+.idea/
 
 # netbeans project files
-nbproject
+nbproject/
 
 # zend studio for eclipse project files
 .buildpath
 .project
-.settings
+.settings/
 
 # windows thumbnail cache
 Thumbs.db
 
 # composer vendor dir
-/vendor
+/vendor/
 
 # composer itself is not needed
 composer.phar
@@ -23,11 +23,42 @@ composer.phar
 
 # phpunit itself is not needed
 phpunit.phar
+
 # local phpunit config
 /phpunit.xml
 
-tests/_output/*
-tests/_support/_generated
+# Yii2 specific files and directories
+/runtime/
+web/assets/
+tests/_output/
+tests/_support/_generated/
 
-#vagrant folder
-/.vagrant
+# Vagrant folder
+.vagrant/
+
+# User-specific files
+*.swp
+*.bak
+*.tmp
+*.log
+*.sql
+*.sqlite
+
+# Node and NPM files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Miscellaneous
+*.seed
+*.orig
+*.rej
+*.swo
+*.swn
+*.swx
