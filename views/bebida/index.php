@@ -55,7 +55,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ]),
             ],
-            
             [
                 'attribute' => 'precio',
                 'filter' => Select2::widget([
@@ -68,7 +67,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ]),
             ],
-
             [
                 'attribute' => 'img',
                 'format' => 'raw',
